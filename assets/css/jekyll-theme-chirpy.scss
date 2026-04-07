@@ -1,0 +1,32 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* Language switcher */
+.lang-switcher {
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  padding: 0.3rem 0;
+
+  .lang-flag {
+    cursor: pointer;
+    opacity: 0.5;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &.active {
+      opacity: 1;
+      cursor: default;
+    }
+  }
+}

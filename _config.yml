@@ -8,6 +8,12 @@ theme: jekyll-theme-chirpy
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
+# Polyglot i18n settings
+languages: ["en", "es"]
+default_lang: "en"
+exclude_from_localization: ["assets/img", "assets/js/dist", "assets/css"]
+parallel_localization: true
+
 # Change to your timezone › https://zones.arilyn.cc
 timezone:
 
@@ -196,6 +202,7 @@ defaults:
 
 sass:
   style: compressed
+  sourcemap: never
 
 compress_html:
   clippings: all
@@ -207,14 +214,13 @@ compress_html:
     envs: [development]
 
 exclude:
-  - "*.gem"
-  - "*.gemspec"
+  - jekyll-theme-chirpy.gemspec
   - docs
   - tools
   - README.md
   - LICENSE
   - purgecss.js
-  - "*.config.js"
+  - rollup.config.js
   - "package*.json"
 
 jekyll-archives:
