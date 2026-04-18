@@ -1,0 +1,19 @@
+<!--
+  The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
+  (Chirpy default + cache-bust query so tab icons refresh after updates.)
+-->
+
+{% capture favicon_path %}{{ '/assets/img/favicons' | relative_url }}{% endcapture %}
+{% if site.favicon_cache_bust %}
+  {% capture favicon_q %}?v={{ site.favicon_cache_bust }}{% endcapture %}
+{% else %}
+  {% capture favicon_q %}?v={{ site.time | date: '%s' }}{% endcapture %}
+{% endif %}
+
+<link rel="icon" type="image/png" href="{{ favicon_path }}/favicon-96x96.png{{ favicon_q }}" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="{{ favicon_path }}/favicon.svg{{ favicon_q }}">
+<link rel="shortcut icon" href="{{ favicon_path }}/favicon.ico{{ favicon_q }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ favicon_path }}/apple-touch-icon.png{{ favicon_q }}">
+{% if site.pwa.enabled %}
+  <link rel="manifest" href="{{ favicon_path }}/site.webmanifest{{ favicon_q }}">
+{% endif %}

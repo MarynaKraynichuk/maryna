@@ -20,36 +20,31 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Maryna
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+author: Maryna
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+# Footer copyright (root key so theme merge cannot replace it with a placeholder).
+copyright_holder: Maryna
+
+tagline: Senior Software Engineer
+
+description: >-
+  Backend engineer focused on payment systems, booking flows, and reliable product delivery. Based in Spain.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://maryna.dev"
 
 github:
-  username: github_username # change to your GitHub username
-
-twitter:
-  username: twitter_username # change to your Twitter username
+  username: MarynaKraynichuk
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
-  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
+  name: Maryna
+  email: contact@maryna.dev
+  fediverse_handle:
   links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
-    # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://github.com/MarynaKraynichuk
 
 # Site Verification Settings
 webmaster_verifications:
@@ -105,11 +100,14 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: /assets/img/avatar.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
-social_preview_image: # string, local or CORS resources
+social_preview_image: /assets/img/social-preview.png
+
+# Change this string when you replace favicons so browsers pick up the new icons (favicon cache is very sticky).
+favicon_cache_bust: "mk-navy-1"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -217,7 +215,6 @@ exclude:
   - jekyll-theme-chirpy.gemspec
   - docs
   - tools
-  - README.md
   - LICENSE
   - purgecss.js
   - rollup.config.js
